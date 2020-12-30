@@ -1,7 +1,6 @@
-package com.robotic.hoover;
+package com.robotic.hoover.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.robotic.hoover.controller.RoboticHooverController;
 import com.robotic.hoover.model.Input;
 import com.robotic.hoover.model.Output;
 import com.robotic.hoover.service.RoboticHooverService;
