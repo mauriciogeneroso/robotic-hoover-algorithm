@@ -6,6 +6,7 @@ import com.robotic.hoover.model.RoomSituation;
 import com.robotic.hoover.utilities.RoomBuilder;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Mauricio Generoso
@@ -20,7 +21,7 @@ public class RoomService {
     public RoomService(int[] roomSize, int[] initialPosition, List<Integer[]> patches, String instructions) {
         this.room = RoomBuilder.buildRoom(roomSize, patches);
         this.currentPosition = new int[][]{{initialPosition[0], initialPosition[1]}};
-        this.instructions = instructions;
+        this.instructions = Objects.isNull(instructions) ? "" : instructions;
     }
 
     public Output execute() {

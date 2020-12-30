@@ -2,8 +2,10 @@ package com.robotic.hoover.service;
 
 import com.robotic.hoover.model.Input;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import static org.mockito.ArgumentMatchers.anyString;
@@ -12,6 +14,7 @@ import static org.mockito.Mockito.*;
 /**
  * @author Mauricio Generoso
  */
+@ExtendWith(MockitoExtension.class)
 public class RoboticHooverServiceTest {
 
     @Mock
@@ -24,6 +27,9 @@ public class RoboticHooverServiceTest {
     public void verifyIfPersistOnDatabase() {
         // Arrange
         Input input = new Input();
+        input.setRoomSize(new int[]{1, 1});
+        input.setCoords(new int[]{0, 0});
+
         doNothing().when(jdbcTemplate).execute(anyString());
 
         // Act

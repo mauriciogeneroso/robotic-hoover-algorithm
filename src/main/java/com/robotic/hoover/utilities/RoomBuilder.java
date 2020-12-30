@@ -4,6 +4,7 @@ import com.robotic.hoover.model.RoomSituation;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Mauricio Generoso
@@ -17,7 +18,9 @@ public final class RoomBuilder {
             Arrays.fill(chars, RoomSituation.CLEAN.getSituation());
         }
 
-        patches.forEach(patch -> room[patch[0]][patch[1]] = RoomSituation.DIRTY.getSituation());
+        if (!Objects.isNull(patches)) {
+            patches.forEach(patch -> room[patch[0]][patch[1]] = RoomSituation.DIRTY.getSituation());
+        }
         return room;
     }
 }
