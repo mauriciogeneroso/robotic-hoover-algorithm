@@ -2,6 +2,9 @@ package com.robotic.hoover.model;
 
 import java.util.List;
 
+/**
+ * @author Mauricio Generoso
+ */
 public class Input {
 
     private int[] roomSize;

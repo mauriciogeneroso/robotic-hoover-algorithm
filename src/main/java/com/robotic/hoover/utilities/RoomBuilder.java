@@ -5,6 +5,9 @@ import com.robotic.hoover.model.RoomSituation;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * @author Mauricio Generoso
+ */
 public final class RoomBuilder {
 
     public static char[][] buildRoom(int[] roomSize, List<Integer[][]> patches) {

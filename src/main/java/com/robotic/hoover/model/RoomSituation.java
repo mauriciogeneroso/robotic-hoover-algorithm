@@ -1,5 +1,8 @@
 package com.robotic.hoover.model;
 
+/**
+ * @author Mauricio Generoso
+ */
 public enum RoomSituation {
     CLEAN('C'), DIRTY('D');
 
