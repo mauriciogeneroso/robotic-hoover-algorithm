@@ -32,15 +32,15 @@ public class RoomBuilderTest {
     public void testDirtyPositions() {
         // Arrange
         int[] roomSize = new int[]{5, 5};
-        List<Integer[][]> patches = new ArrayList<>();
-        patches.add(new Integer[][]{{1, 2}});
-        patches.add(new Integer[][]{{3, 4}});
+        List<Integer[]> patches = new ArrayList<>();
+        patches.add(new Integer[]{1, 2});
+        patches.add(new Integer[]{3, 4});
 
         // Act
         char[][] room = RoomBuilder.buildRoom(roomSize, patches);
 
         // Assert
         patches.forEach(patch ->
-                Assertions.assertEquals(room[patch[0][0]][patch[0][1]], RoomSituation.DIRTY.getSituation()));
+                Assertions.assertEquals(room[patch[0]][patch[1]], RoomSituation.DIRTY.getSituation()));
     }
 }

@@ -9,7 +9,7 @@ public class Input {
 
     private int[] roomSize;
     private int[] coords;
-    private List<Integer[][]> patches;
+    private List<Integer[]> patches;
     private String instructions;
 
     public int[] getRoomSize() {
@@ -28,11 +28,11 @@ public class Input {
         this.coords = coords;
     }
 
-    public List<Integer[][]> getPatches() {
+    public List<Integer[]> getPatches() {
         return patches;
     }
 
-    public void setPatches(List<Integer[][]> patches) {
+    public void setPatches(List<Integer[]> patches) {
         this.patches = patches;
     }
 
