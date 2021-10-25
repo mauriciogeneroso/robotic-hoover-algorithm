@@ -15,21 +15,21 @@ public class RoomServiceTest {
     @Test
     public void defaultTest() {
         // Arrange
-        int[] roomSize = new int[]{5, 5};
-        int[] initialPosition = new int[]{1, 2};
+        var roomSize = new int[]{5, 5};
+        var initialPosition = new int[]{1, 2};
         List<Integer[]> patches = new ArrayList<>();
-        String instructions = "NNESEESWNWW";
+        var instructions = "NNESEESWNWW";
 
         patches.add(new Integer[]{1, 0});
         patches.add(new Integer[]{2, 2});
         patches.add(new Integer[]{2, 3});
 
-        RoomService service = new RoomService(roomSize, initialPosition, patches, instructions);
+        var service = new RoomService(roomSize, initialPosition, patches, instructions);
 
-        Output expectedOutput = new Output(new int[]{1,3}, 1);
+        var expectedOutput = new Output(new int[]{1,3}, 1);
 
         // Act
-        Output output = service.execute();
+        var output = service.execute();
 
         // Assert
         Assertions.assertArrayEquals(expectedOutput.getCoords(), output.getCoords());

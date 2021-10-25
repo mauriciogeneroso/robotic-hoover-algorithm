@@ -28,9 +28,9 @@ public class RoboticHooverService {
     }
 
     public Output cleanRoom(Input input) {
-        RoomService service = new RoomService(
+        var service = new RoomService(
                 input.getRoomSize(), input.getCoords(), input.getPatches(), input.getInstructions());
-        Output output = service.execute();
+        var output = service.execute();
         persist(input, output);
         return output;
     }

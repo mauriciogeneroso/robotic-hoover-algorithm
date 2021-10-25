@@ -12,15 +12,16 @@ import java.util.Objects;
 public final class RoomBuilder {
 
     public static char[][] buildRoom(int[] roomSize, List<Integer[]> patches) {
-        char[][] room = new char[roomSize[0]][roomSize[1]];
+        var room = new char[roomSize[0]][roomSize[1]];
 
-        for (char[] chars : room) {
+        for (var chars : room) {
             Arrays.fill(chars, RoomSituation.CLEAN.getSituation());
         }
 
         if (!Objects.isNull(patches)) {
             patches.forEach(patch -> room[patch[0]][patch[1]] = RoomSituation.DIRTY.getSituation());
         }
+
         return room;
     }
 }

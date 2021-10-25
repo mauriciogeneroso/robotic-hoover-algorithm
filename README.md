@@ -20,11 +20,11 @@ docker-compose -f mysql.yml up -d && ./gradlew build && java -jar build/libs/dem
 
 ### How to use the API
 
-1. The API will be run on 8080 port, that is will be run on http://localhost:8080
+1. The API will be running on 8080 port, that will be run on http://localhost:8080
 2. The API uri is `robotic-hoover` and the endpoint to execute the algorithm is `execute`
-3. Should be used POST verb to send the informations.
+3. Should be used POST verb to send the information.
 
-The complete URI is `POST http://localhost:8080/robotic-hoover/execute`. Informations need be send on body and the instructions for input and output are bellow.
+The complete URI is `POST http://localhost:8080/robotic-hoover/execute`. Information need to be sending on body and the instructions for input and output are bellow.
 
 ### How to connect to database
 

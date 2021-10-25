@@ -32,13 +32,13 @@ public class RoboticHooverControllerTest {
     @Test
     public void shouldReturnDefaultMessage() throws Exception {
         // Arrange
-        Input input = new Input();
-        Output output = new Output(new int[]{1, 1}, 0);
+        var input = new Input();
+        var output = new Output(new int[]{1, 1}, 0);
 
         when(service.cleanRoom(any())).thenReturn(output);
 
         // Act
-        ResultActions result = this.mockMvc.perform(post("/execute")
+        var result = this.mockMvc.perform(post("/execute")
                 .content(objectMapper.writeValueAsString(input))
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON));

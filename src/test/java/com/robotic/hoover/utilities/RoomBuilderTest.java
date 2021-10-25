@@ -15,15 +15,15 @@ public class RoomBuilderTest {
     @Test
     public void testDefaultSpacesAsCleaned() {
         // Arrange
-        int[] roomSize = new int[]{5, 5};
+        var roomSize = new int[]{5, 5};
 
         // Act
-        char[][] room = RoomBuilder.buildRoom(roomSize, new ArrayList<>());
+        var room = RoomBuilder.buildRoom(roomSize, new ArrayList<>());
 
         // Assert
-        for (char[] roomLine : room) {
-            for (int i = 0; i < roomLine.length; i++) {
-                Assertions.assertEquals(roomLine[i], RoomSituation.CLEAN.getSituation());
+        for (var roomLine : room) {
+            for (char c : roomLine) {
+                Assertions.assertEquals(c, RoomSituation.CLEAN.getSituation());
             }
         }
     }
@@ -31,13 +31,13 @@ public class RoomBuilderTest {
     @Test
     public void testDirtyPositions() {
         // Arrange
-        int[] roomSize = new int[]{5, 5};
+        var roomSize = new int[]{5, 5};
         List<Integer[]> patches = new ArrayList<>();
         patches.add(new Integer[]{1, 2});
         patches.add(new Integer[]{3, 4});
 
         // Act
-        char[][] room = RoomBuilder.buildRoom(roomSize, patches);
+        var room = RoomBuilder.buildRoom(roomSize, patches);
 
         // Assert
         patches.forEach(patch ->

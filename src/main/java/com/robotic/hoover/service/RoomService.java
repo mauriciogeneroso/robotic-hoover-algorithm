@@ -25,7 +25,7 @@ public class RoomService {
     }
 
     public Output execute() {
-        for (int i = 0; i < instructions.length(); i++) {
+        for (var i = 0; i < instructions.length(); i++) {
             Direction direction = Direction.of(instructions.charAt(i));
 
             switch (direction) {

@@ -26,7 +26,7 @@ public class RoboticHooverServiceTest {
     @Test
     public void verifyIfPersistOnDatabase() {
         // Arrange
-        Input input = new Input();
+        var input = new Input();
         input.setRoomSize(new int[]{1, 1});
         input.setCoords(new int[]{0, 0});
 
